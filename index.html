@@ -1,1034 +1,1110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Ethan Bukenya | Software Engineer Portfolio</title>
-    <meta content="Professional Software Engineer and Full-Stack Developer specializing in modern web technologies" name="description" />
+
+    <title>Ethan Bukenya | Portfolio | Journey as a Programmer</title>
+    <meta content="Ethan Bukenya Portfolio | Journey as a programmer" name="description" />
+    <meta content="Portfolio,Ethan Bukenya" name="keywords" />
+
+    <meta name="theme-color" content="#fff" />
+    <meta name="author" content="Ethan Bukenya" />
+
+    <!-- Mainfest -->
+    <link rel="manifest" type="text/css" href="manifest.json" />
+
+    <!----------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     
+    <!--Google verification--->
+
+
+    <!----------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------->
+
+    <!-- Favicons -->
+    <link href="assets/img/portfolio.svg" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary-color: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary-color: #10b981;
-            --accent-color: #f59e0b;
-            --text-primary: #1f2937;
-            --text-secondary: #6b7280;
-            --text-light: #9ca3af;
-            --bg-primary: #ffffff;
-            --bg-secondary: #f9fafb;
-            --bg-card: #ffffff;
-            --border-color: #e5e7eb;
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-primary);
-            background: var(--bg-primary);
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 1000;
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-menu a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-menu a:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background: var(--primary-color);
-            transition: width 0.3s ease;
-        }
-
-        .nav-menu a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23667eea" fill-opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23764ba2" fill-opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
-            opacity: 0.5;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-text h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-text .subtitle {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-
-        .hero-text .description {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 2rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: var(--primary-color);
-            color: white;
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .hero-image {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            opacity: 0.1;
-            animation: pulse 4s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-
-        .profile-image {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
-            box-shadow: var(--shadow-xl);
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Social Links */
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .social-link {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: white;
-            border-radius: 50%;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .social-link:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-            color: var(--primary-color);
-        }
-
-        /* Section Styles */
-        .section {
-            padding: 5rem 0;
-        }
-
-        .section.bg-secondary {
-            background: var(--bg-secondary);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 1rem;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .skill-category h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        .skill-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .skill-name {
-            font-weight: 500;
-            color: var(--text-primary);
-        }
-
-        .skill-level {
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-
-        .skill-bar {
-            height: 8px;
-            background: var(--border-color);
-            border-radius: 4px;
-            overflow: hidden;
-            margin-top: 0.5rem;
-        }
-
-        .skill-progress {
-            height: 100%;
-            background: var(--gradient-primary);
-            border-radius: 4px;
-            transition: width 1s ease;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--bg-card);
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-        }
-
-        .project-content {
-            padding: 2rem;
-        }
-
-        .project-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .project-description {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-tag {
-            background: var(--bg-secondary);
-            color: var(--primary-color);
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .project-link:hover {
-            color: var(--primary-dark);
-        }
-
-        /* Contact Section */
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .contact-info h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .contact-form {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 1rem;
-            box-shadow: var(--shadow-md);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: var(--text-primary);
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 0.875rem;
-            border: 2px solid var(--border-color);
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        .form-textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2rem;
-            }
-
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-buttons {
-                justify-content: center;
-            }
-        }
-
-        /* Animations */
-        .fade-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-secondary);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-color);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary-dark);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css?v=2.0" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css?v=2.0" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css?v=2.0" rel="stylesheet" />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css?v=2.0" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css?v=2.0" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css?v=2.0" rel="stylesheet" />
+
+    <!-- Font Awesome CDN all min.css?v=2.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css?v=2.0" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <!--  Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- <link href="assets/css/custom.css" rel="stylesheet" /> -->
+    <!-- meta tags -->
+    <meta name="description" content="I have been through a very wonderful journey till now, I started my programming journey a long time back when I was in my 11th class there I learned my first programming languages i.e. Python and MySQL." />
+    <meta property="og:title" content="Ethan Bukenya | Portfolio | Journey as a Programmer" />
+    <meta property="og:url" content="https://ethanbukenya.github.io/" />
+    <meta property="og:description" content="I have been through a very wonderful journey till now, I started my programming journey a long time back when I was in my 11th class there I learned my first programming languages i.e. Python and MySQL." />
+    <meta property="og:site_name" content="Ethan Bukenya | Portfolio | Journey as a Programmer" />
+    <meta itemprop="name" content="Ethan Bukenya | Portfolio | Journey as a Programmer" />
+    <meta itemprop="description" content="I have been through a very wonderful journey till now, I started my programming journey a long time back when I was in my 11th class there I learned my first programming languages i.e. Python and MySQL." />
+    <!--                                           -->
 </head>
+<style>
+    .geeksforgeeks-icon::before,
+    .leetcode-icon::before,
+    .chess-com-icon.grey-icon::before {
+        content: " ......";
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: transparent;
+        background-position: center;
+    }
+    
+    .geeksforgeeks-icon.grey-icon::before {
+        background-image: url(/assets/img/geeksforgeeks_grey.svg);
+    }
+    
+    .geeksforgeeks-icon.white-icon::before {
+        background-image: url(/assets/img/geeksforgeeks_white.svg);
+    }
+    
+    .leetcode-icon.grey-icon::before {
+        background-image: url(/assets/img/leetcode-light.webp);
+    }
+    
+    .leetcode-icon.white-icon::before {
+        background-image: url(/assets/img/leetcode-white.png);
+    }
+    
+    .chess-com-icon.grey-icon::before {
+        background-image: url(/assets/img/chesscom_light.svg);
+    }
+    
+    .chess-com-icon.white-icon::before {
+        background-image: url(/assets/img/chesscom_white.svg);
+    }
+</style>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Ethan Bukenya</a>
-            <ul class="nav-menu">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- ======= Mobile nav toggle button ======= -->
+    <!--   <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+        <nav id="navbar" class="navbar nav-menu">
+            <ul>
+                <!--<li><a href="intro.html" class="portfolio-details-lightbox nav-link scrollto"
+          data-glightbox="type: external" title="Portfolio Details"><i class="bi bi-person-circle"></i> <span>Introduction</span></a></li>-->
+                <li>
+                    <a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a>
+                </li>
+                <li>
+                    <a href="#skills" class="nav-link scrollto"><i class="bx bx-analyse"></i> <span>skills</span></a>
+                </li>
+                <li>
+                    <a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a>
+                </li>
+                <li>
+                    <a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a>
+                </li>
+                <li>
+                    <a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a>
+                </li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+        <!-- .nav-menu -->
+    </header>
+    <!-- End Header -->
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <div class="hero-text fade-up">
-                <h1>Software Engineer & Full-Stack Developer</h1>
-                <p class="subtitle">Building digital experiences that matter</p>
-                <p class="description">
-                    I'm a passionate software engineer specializing in modern web technologies, 
-                    creating scalable solutions and beautiful user experiences that drive business growth.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-code"></i>
-                        View My Work
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i>
-                        Get In Touch
-                    </a>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com" class="social-link" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com" class="social-link" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://twitter.com" class="social-link" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="mailto:ethancylb@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image fade-up">
-                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiByeD0iMTUwIiBmaWxsPSJsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjNjY3ZWVhIDAlLCAjNzY0YmEyIDEwMCUpIi8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTYwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9IkludGVyIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iNjAwIj5FQjwvdGV4dD4KPC9zdmc+" alt="Ethan Bukenya" class="profile-image">
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex flex-column justify-content-center">
+        <div class="container" data-aos="zoom-in" data-aos-delay="100">
+            <h1>Ethan Bukenya</h1>
+            <p class="leetcode-210DayCodeChallenge">
+                <a href="https://www.github.com/EthanBukenya/" target="_blank">
+                    <span class="orange"> SOFTWARE ENGINEER </span>
+                </a>
+            </p>
+            <p>
+                I'm a
+                <span class="typed" data-typed-items="Full stack web developer, AI/ML Developer, 3D Web Developer, Search engine optimizer"></span>
+            </p>
+            <div class="social-links">
+                <a href="https://leetcode.com/ethanbukenya/" target="_blank" class="leetcode"><i
+            class="bx leetcode-icon grey-icon"></i></a>
+              <!--  <a href="https://auth.geeksforgeeks.org/user/ethanbukenya" target="_blank" class="geeksforgeeks"><i
+            class="bx geeksforgeeks-icon grey-icon"></i></a> -->
+                <a href="https://github.com/EthanBukenya" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+                <!-- <a href="https://www.chess.com/member/EthanBukenya/" target="_blank" class="chess-com"><i
+            class="bx chess-com-icon grey-icon"></i></a> -->
+               <!-- <a href="https://stackoverflow.com/users/17047946/ankit-kumar-jha" target="_blank" class="github"><i
+            class="bx bxl-stack-overflow"></i></a>-->
+                <a href="https://www.linkedin.com/in/ethanbukenya" class="linkedin" target="_blank"><i
+            class="bx bxl-linkedin"></i></a>
+              <!--  <a href="https://www.hackerrank.com/ethanbukenya" class="twitter" target="_blank"><i
+            class="fab fa-hackerrank"></i></a> -->
+                <a href="https://www.youtube.com/ethbukenya" class="youtube" target="_blank"><i
+            class="bx bxl-youtube"></i></a>
+                <a href="mailto:ethancylb@gmail.com" class="gmail" target="_blank"><i class="bx bxl-google"></i></a>
+                <a href="https://www.instagram.com/ethbukenya/" class="instagram" target="_blank"><i
+            class="bx bxl-instagram"></i></a>
             </div>
         </div>
     </section>
+    <!-- End Hero -->
 
-    <!-- Skills Section -->
-    <section id="skills" class="section bg-secondary">
-        <div class="container">
-            <div class="section-header fade-up">
-                <h2 class="section-title">Technical Skills</h2>
-                <p class="section-subtitle">
-                    A comprehensive overview of my technical expertise and proficiency levels
-                </p>
-            </div>
-            
-            <div class="skills-grid">
-                <div class="skill-category fade-up">
-                    <h3>Frontend Development</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">React & Next.js</span>
-                        <span class="skill-level">95%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%"></div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <span class="skill-name">JavaScript & TypeScript</span>
-                        <span class="skill-level">90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <span class="skill-name">HTML5 & CSS3</span>
-                        <span class="skill-level">95%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%"></div>
-                    </div>
+    <main id="main">
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>About Me</h2>
+                    <p>I am a Full Stack Software Engineer with a strong passion for building scalable, 
+                        user-focused web applications and exploring the frontiers of Artificial Intelligence
+                         (AI), Machine Learning (ML), and Web3 technologies.</p>
                 </div>
 
-                <div class="skill-category fade-up">
-                    <h3>Backend Development</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">Node.js & Express</span>
-                        <span class="skill-level">85%</span>
+                <div class="row">
+                    <div class="col-lg-4" style="display: flex; justify-content: center">
+                        <img src="assets/img/ethan.jpg" style="max-width: 80%; max-height: 400px" class="img-fluid" alt="Ethan Bukenya" />
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <span class="skill-name">Python & Django</span>
-                        <span class="skill-level">80%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%"></div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <span class="skill-name">Database Design</span>
-                        <span class="skill-level">85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
-                    </div>
-                </div>
-
-                <div class="skill-category fade-up">
-                    <h3>Tools & Technologies</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">Git & GitHub</span>
-                        <span class="skill-level">90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <span class="skill-name">Docker & AWS</span>
-                        <span class="skill-level">75%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 75%"></div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <span class="skill-name">UI/UX Design</span>
-                        <span class="skill-level">70%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 70%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <div class="section-header fade-up">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">
-                    A showcase of my recent work and personal projects
-                </p>
-            </div>
-            
-            <div class="projects-grid">
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">E-Commerce Platform</h3>
-                        <p class="project-description">
-                            A full-stack e-commerce solution with advanced features including real-time inventory, 
-                            payment processing, and analytics dashboard.
+                    <div class="col-lg-8 pt-4 pt-lg-0 content">
+                        <h3>Tech Savvy, purpose &amp; Impact Minded.</h3>
+                        <p class="fst-italic">
+                            With expertise across both front-end and back-end development.
                         </p>
-                        <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">Node.js</span>
-                            <span class="project-tag">MongoDB</span>
-                            <span class="project-tag">Stripe</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Live Demo
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Source Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Task Management App</h3>
-                        <p class="project-description">
-                            A collaborative task management application with real-time updates, 
-                            team collaboration features, and advanced project tracking.
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li>
+                                        <i class="bi bi-chevron-right"></i>
+                                        <strong>Birthday:</strong> <span>22 Dec</span>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-chevron-right"></i>
+                                        <strong>Website:</strong>
+                                        <span>ethanbukenya.github.io</span>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-chevron-right"></i>
+                                        <strong>Phone:</strong> <span>+256 770707300</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li>
+                                        <i class="bi bi-chevron-right"></i>
+                                        <strong>Degree:</strong> <span>Bsc. in Software Engineering. </span>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-chevron-right"></i>
+                                        <strong>Email:</strong>
+                                        <span>ethancylb@gmail.com</span>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-chevron-right"></i>
+                                        <strong>Resume:</strong>
+                                        <span><a href="/assets/doc/ethanbukenya-resume.pdf?v=5.0" target="_blank">Link<i class="bx bx-file"
+                          style="font-size: 20px; vertical-align: middle"></i></a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p>I thrive in creating end-to-end solutions that seamlessly integrate functionality, performance, and design.</p>
+                        <p>
+                            My curiosity drives me to constantly learn and experiment with emerging technologies—whether it’s leveraging AI/ML models to solve real-world problems or exploring decentralized applications and blockchain innovations in the Web3 space. I value clean, efficient code, collaborative teamwork, and the pursuit of solutions that deliver lasting impact.
                         </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Vue.js</span>
-                            <span class="project-tag">Firebase</span>
-                            <span class="project-tag">PWA</span>
-                            <span class="project-tag">WebSocket</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Live Demo
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Source Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Analytics Dashboard</h3>
-                        <p class="project-description">
-                            A comprehensive analytics dashboard with real-time data visualization, 
-                            custom reporting, and interactive charts for business insights.
+                        <p>
+                            Beyond coding, i like playing chess, car racing and meditation (one that's abit different from the generic kind) 
                         </p>
-                        <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">D3.js</span>
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">PostgreSQL</span>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- End About Section -->
+
+        <!-- ======= Skills Section ======= -->
+        <section id="skills" class="skills section-bg">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Skills</h2>
+                    <p>learning is a lifelong daily process for me</p>
+                </div>
+
+                <div class="row skills-content">
+                    <div class="col-lg-6">
+                        <div class="progress">
+                            <span class="skill">Project management/devlopment <i class="val">98%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Live Demo
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Source Code
-                            </a>
+                        <div class="progress">
+                            <span class="skill">3D web development <i class="val">85%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="background-color: #0db7ed" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">HTML<i class="val">90%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">CSS<i class="val">90%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">javascript & ES6 <i class="val">95%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">Php<i class="val">95%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">Data science and machine learning
+                <i class="val">75%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">Web scraping using python<i class="val">70%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">Adobe XD <i class="val">75%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="progress">
+                            <span class="skill">python <i class="val">95%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">chrome extension<i class="val">85%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">Problem solving<i class="val">95%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">MySQL<i class="val">90%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">React <i class="val">90%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">Laravel <i class="val">80%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">git & Github <i class="val">80%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">Docker <i class="val">70%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">Devlopment during learning <i class="val">95%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" style="background-color: gold" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- End Skills Section -->
 
-    <!-- Contact Section -->
-    <section id="contact" class="section bg-secondary">
+
+
+
+        <!-- ======= Resume Section ======= -->
+        <section id="resume" class="resume">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Resume</h2>
+                    <p>
+                        Enthusiastic software engineer and web developer with hard work, attention to detail, and excellent organization skills are eager to contribute to the team's success. A clear understanding of project workflow and data. Excellent reputation for solving
+                        problems and improving customer satisfaction
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3 class="resume-title">Sumary</h3>
+                        <div class="resume-item pb-0">
+                            <h4>Ethan Bukenya</h4>
+                            <p>
+                                <em>Full Stack Software Engineer with expertise in designing and developing 
+                                    scalable web applications and strong enthusiasm for AI/ML and Web3 
+                                    technologies. Skilled in front-end and back-end development, cloud 
+                                    deployment, and integrating innovative solutions into production systems.
+                                     Passionate about leveraging cutting-edge technologies to build impactful
+                                      applications that improve user experience and drive business value.</em>
+                            </p>
+                            <ul>
+                                <li>Eugean st 17, Kampala, UG</li>
+                                <li>+256 770707300</li>
+                                <li>ethancylb@gmail.com</li>
+                            </ul>
+                        </div>
+                        <h3 class="resume-title">Education</h3>
+                        <div class="resume-item">
+                            <h4>
+                                Bachelor of Science in Software Engineering
+                            </h4>
+                            <p><em>Makerere University</em></p>
+                        </div>
+                        <div class="resume-item">
+                            <h4>Senior Secondary School</h4>
+                            <p><em>Namirembe Hillside HS</em></p>
+                            <p></p>
+                        </div>
+                        <h3 class="resume-title">Volunteering</h3>
+                        <div class="resume-item">
+                            <h4>Phaneroo Org</h4>
+                            <p>
+                                <em>I am a volunteer at Phaneroo a Non profit Organisation in the IT department.</em>
+                            </p>
+                        </div>
+   
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="resume-title">Professional Experience</h3>
+                        <div class="resume-item">
+
+                            <h4>Full Stack Software Engineer </h4>
+                            <h5>Smaster LLC  – Dubai | 02/2023 – Present</h5>
+                            <ul>
+                                <li>Designed and developed scalable web applications using React.js, Node.js, and Laravel. </li>
+                                <li>Integrated machine learning models into production to improve decision-making processes.</li>
+                                <li>Implemented smart contracts and decentralized app (dApp) features for blockchain-enabled solutions. </li>
+                                <li>Collaborated with cross-functional teams in an Agile/Scrum environment. </li>
+                                <li>Improved application performance by 30% through optimized backend logic and database queries. </li>
+                            </ul>  
+                        </div>
+                        <div class="resume-item">
+
+                            <h4>Junior Software Developer (Intern)</h4>
+                            <h5>Nilestack Technologies Ltd – Kampala | 12/2019 – 01/2023</h5>
+                            <ul>
+                                <li>
+                                    Built RESTful APIs and user-friendly interfaces with JavaScript and Python frameworks.
+                                </li>
+                                <li>
+                                    Contributed to database design and optimized queries for large-scale datasets.
+                                </li>
+                                <li>
+                                    Assisted in deploying cloud-based solutions on AWS/GCP.
+                                </li>
+                                <li>
+                                    Participated in code reviews and implemented test-driven development (TDD) practices.
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="resume-item">
+
+                            <h4>MTN MoMo API Hackathon </h4>
+                            <h5>2023</h5>
+                            <ul>
+                                <li>Top 10 software Developer Finalist </li>
+                               
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Resume Section -->
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio section-bg">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Portfolio</h2>
+                    <p>
+                        This portfolio showcases some of my projects, experiments, and contributions that 
+                        reflect my journey as a developer and my enthusiasm for learning, creating, and pushing the boundaries of technology.
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                        <ul id="portfolio-flters">
+                            <li data-filter="*" class="filter-active">All</li>
+                            <li data-filter=".chrome-extension">AI/ML</li>
+                            <li data-filter=".front-end">front-end</li>
+                            <li data-filter=".website-3d">3D website</li>
+                            <li data-filter=".full-stack-web-development">
+                                Full stack websites(Laravel)
+                            </li>
+                            <li data-filter=".game" style="text-transform: none">Games</li>
+                            <li data-filter=".tool" style="text-transform: none">Tools</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-5 col-md-6 portfolio-item tool">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/single-tab-lock.png" class="img-fluid" alt="An npm package to restrict users from opening multiple tabs of a single website." />
+                            <div class="portfolio-info">
+                                <h4>single-tab-lock</h4>
+                                <p>NPM package</p>
+                                <div class="portfolio-links">
+                                    <a href="single-tab-lock.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item chrome-extension">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/website-tracker.png" class="img-fluid" alt="The Website Tracker Chrome extension helps you monitor and manage your web browsing habits by tracking the time spent on each website. Additionally, it provides analytics in the form of graphs and charts, allowing you to visualize your usage patterns."
+                            />
+                            <div class="portfolio-info">
+                                <h4>Website Tracker</h4>
+                                <p>chrome extension</p>
+                                <div class="portfolio-links">
+                                    <a href="website-tracker.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item website-3d">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/realistic-3D-solar-System.gif" class="img-fluid" alt="Welcome to the 'realistic-3d-solar-system' project! This project provides an interactive 3D simulation of the solar system with options for both realistic and less accurate representations. Users can explore and learn more about each celestial body in the solar system. This is the 2nd version of my old project 'solar-system3D,' which was very inaccurate. This is an updated version with many new features and functions."
+                            />
+                            <div class="portfolio-info">
+                                <h4>Realistic 3D Solar System Simulation</h4>
+                                <div class="portfolio-links">
+                                    <a href="realistic-3D-solar-System.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item front-end">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/sync-browser.gif" class="img-fluid" alt="
+                Sync-Browser is a fun web app that allows you to collaborate in real-time across different browser tabs. Watch arrows changing directions together as you move your browser tab on the screen, creating a lively and engaging visual experience."
+                            />
+                            <div class="portfolio-info">
+                                <h4>Sync Browser : Sync Pair of Browsers</h4>
+                                <div class="portfolio-links">
+                                    <a href="sync-browser.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item full-stack-web-development">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/readsculpt.png" class="img-fluid" alt="
+                  ReadScript, a passion-fueled haven for bibliophiles, unveils its initial glimpse—a virtual sanctuary where the quest for the perfect read becomes a breeze. Dive into a sea of book blocks adorned with essential details and user ratings. Seamlessly login with a click, express love through likes and comments, and share your book suggestions in the vibrant Book Suggestion Corner. As the project evolves, anticipate user profiles akin to an Instagram for book lovers, fostering a tight-knit community. Join ReadScript, where every book has a story waiting to unfold. 📚✨"
+                            />
+                            <div class="portfolio-info">
+                                <h4>Readsculpt</h4>
+                                <p>Crafting Futures from Past Pages</p>
+                                <div class="portfolio-links">
+                                    <a href="readsculpt.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-6 portfolio-item tool front-end">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/drawpass.png" class="img-fluid" alt="
+                  DrawPass transforms the way we create passwords by introducing a unique visual approach. Say farewell to complex alphanumeric strings and welcome an intuitive experience where users draw and arrange personalized patterns, creating secure yet memorable passwords. With DrawPass, security meets simplicity, providing a novel way to safeguard your digital accounts. Unleash your creativity and fortify your defenses with DrawPass - where drawing becomes your key to digital security."
+                            />
+                            <div class="portfolio-info">
+                                <h4>DrawPass: Visualize Password</h4>
+                                <div class="portfolio-links">
+                                    <a href="drawpass.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item website-3d game">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/snake-game-3d.gif" class="img-fluid" alt="Dive into our 3D Snake Game crafted using Three.js! Use arrow keys and S/W/P/Space keys to guide your snake toward delicious food, earning 1 point for each bite. And guess what? After every 5 bites, you'll score an extra 5 points! Ready for a challenge? You can easily change the speed. You've got 3 minutes to play, and if you want more time, just make a simple change in the web link. Just make sure to avoid letting your snake bite itself anywhere on its body. Also, keep an eye on the time ticking down. Move your view with your mouse – it's Snake like you've never experienced!"
+                            />
+                            <div class="portfolio-info">
+                                <h4>3D snake game</h4>
+                                <div class="portfolio-links">
+                                    <a href="snake-game-3d.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item website-3d">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/3d-resume.gif" class="img-fluid" alt="I transformed my basic 2D HTML, CSS, and JavaScript resume into a 3D resume! By utilizing Three.js, I've given my resume a 3D makeover. It's no longer just a regular resume, now you can interact with it and even have some fun. Check it out!"
+                            />
+                            <div class="portfolio-info">
+                                <h4>3d Resume</h4>
+                                <div class="portfolio-links">
+                                    <a href="3d-resume.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item website-3d">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/3d-city-tour.png" class="img-fluid" alt="Welcome to the 3D City with Autonomous Cars project! This project showcases an immersive virtual cityscape built using Three.js, complete with interactive camera controls and autonomous moving cars. The scene features different time modes and atmospheric lighting effects to enhance the realism."
+                            />
+                            <div class="portfolio-info">
+                                <h4>3d city tour</h4>
+                                <div class="portfolio-links">
+                                    <a href="3d-city-tour.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item full-stack-web-development">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/tenie-1.png" class="img-fluid" alt="Screenshot of the Recruitment Process ERP Tool: A web-based tool designed to ease the recruitment process in companies" />
+                            <div class="portfolio-info">
+                                <h4>Tenie</h4>
+                                <p>Full stack ERP using laravel</p>
+                                <div class="portfolio-links">
+                                    <a href="tenie.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item website-3d">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/falling-balls.png" class="img-fluid" alt="Explore our interactive 3D Ball Physics Simulation. Click to create balls that mimic real-world behavior. Watch them fall, bounce, and roll convincingly due to gravity. This engaging web experience brings lifelike physics to your screen."
+                            />
+                            <div class="portfolio-info">
+                                <h4>Falling ball</h4>
+                                <p>Generate a realistic falling balls using mouse</p>
+                                <div class="portfolio-links">
+                                    <a href="falling-balls.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item website-3d">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/solar-system3D.gif" class="img-fluid" alt="Discover the Solar System like never before with 'SolarSystem Explore'! This 3D visualization, created using HTML and Three.js, offers a realistic view of planets, orbits, and the Sun. Interact with intuitive controls to explore and learn fascinating facts about each planet."
+                            />
+                            <div class="portfolio-info">
+                                <h4>3D solar system</h4>
+                                <div class="portfolio-links">
+                                    <a href="solar-system3D.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item front-end">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/zoom-image.png" class="img-fluid" alt="Zoom Image is a web page showcasing an interactive image with a magnifying glass effect. Users can effortlessly control and zoom in on specific areas of the image by simply moving their cursor. Built using HTML, CSS, and JavaScript, this project provides an engaging and intuitive way to explore and magnify details within an image."
+                            />
+                            <div class="portfolio-info">
+                                <h4>Zoom Image</h4>
+                                <p>Zoom image using magnifying glass</p>
+                                <div class="portfolio-links">
+                                    <a href="zoom-image.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item front-end game">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/play-connect-1.png" class="img-fluid" alt="Play React Game - SOS & Chain Reaction! Challenge friends in captivating dual player games. Create SOS or trigger chain reactions to outsmart opponents. Sign in with Google, share codes, and enjoy thrilling multiplayer battles. Visit the website for endless entertainment and track past game details."
+                            />
+                            <div class="portfolio-info">
+                                <h4>Play connect</h4>
+                                <p>Dual player game using Reactjs and firebase</p>
+                                <div class="portfolio-links">
+                                    <a href="play-connect.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item website-3d">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/create-element-on-grid.png" class="img-fluid" alt="This project utilizes Three.js to build an interactive 3D grid environment. Users can generate and delete objects on the grid by clicking. Objects rotate, and the camera perspective is adjustable. It's a dynamic, visually engaging experience."
+                            />
+                            <div class="portfolio-info">
+                                <h4>create element on grid</h4>
+                                <div class="portfolio-links">
+                                    <a href="create-element-on-grid.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item tool">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/typingEffect.png" class="img-fluid" alt="Created a typing effect tool for websites, adding dynamic text animations with a simple link." />
+                            <div class="portfolio-info">
+                                <h4>Typing Effect</h4>
+                                <p>Tool to add typing effect</p>
+                                <div class="portfolio-links">
+                                    <a href="typing-effect.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item front-end">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/hotstar-clone.png" class="img-fluid" alt="I had made a web clone of Hotstar UI using HTML5, CSS3, vanilla javascript, and ES6. I have written a very optimized js code so that it works faster and don't request irrelevant code, this makes it easier to run on the client-side. The page also has infinite scrolling same as Hotstar (Currently only for desktop)"
+                            />
+                            <div class="portfolio-info">
+                                <h4>Hotstar clone</h4>
+                                <p>Front end website</p>
+                                <div class="portfolio-links">
+                                    <a href="hotstar-clone.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item front-end">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/algorithm-visualizer.png" class="img-fluid" alt="Just a beginning in the journey of algorithms, I have made a project where you can visualize the #algorithms. Currently, there are three categories of algorithms (i.e., Sorting, Binary search, and Backtracking). Here is the link to the project (https://lnkd.in/ec5tHucx) This is a #PWA application, which means it can run on any platform, and its also installable Sorting( Bubble sort,Insertion sort,Selection Sort,quick sort and merge sort).Binary Search(Binary search on Sorted array (Time complexity = О(log2n), Binary search in infinite sorted array (constant speed) (Time complexity = О(log2n), Binary search in infinite sorted array (exponential speed) (Time complexity = О(log2n), Binary search on rotated sorted Array (Time complexity = О(log2n) 3)), Backtraking: (Sudoku solver (Time complexity = О(9^n)), nQueen problem Solver (Time complexity = О(2^n))"
+                            />
+                            <div class="portfolio-info">
+                                <h4>Algorithm visualizer</h4>
+                                <div class="portfolio-links">
+                                    <a href="algorithm-visualizer.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item front-end">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/react-alarm.png" class="img-fluid" alt="Screenshot of the alarm clock web project created using React.js" />
+                            <div class="portfolio-info">
+                                <h4>Alarm clock</h4>
+                                <p>Created by reactjs</p>
+                                <div class="portfolio-links">
+                                    <a href="react-alarm.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item chrome-extension">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/Interactive-Input-Tracker.gif" class="img-fluid" alt="Introducing 'Interactive Input Tracker,' a Chrome extension offering real-time textual feedback for actions like keystrokes, mouse clicks, and complex interactions. Displaying elegantly at the bottom left, it enhances awareness and streamlines browsing."
+                            />
+                            <div class="portfolio-info">
+                                <h4>Interactive Input Tracker</h4>
+                                <p>chrome extension</p>
+                                <div class="portfolio-links">
+                                    <a href="Interactive-Input-Tracker.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item front-end game">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/snake-game.png" class="img-fluid" alt="This is a snake game. Snake is the common name for a video game concept where the player maneuvers a line that grows in length, with the line itself being a primary obstacle.This is a PWA application, which means it can run on any platform, and its also installable (Just open the website on mobile, you will get the option at the bottom and on the desktop, you will get the option in the right corner. to install the app)"
+                            />
+                            <div class="portfolio-info">
+                                <h4>Snake Game</h4>
+                                <p>Progressive Web App</p>
+                                <div class="portfolio-links">
+                                    <a href="snake-game.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item front-end">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/id-card.png" class="img-fluid" alt="Design and personalize your IES college ID card effortlessly. Edit information, customize fields, and download your unique ID card in seconds with the user-friendly IES ID Card Generator using HTML/CSS. Simplify ID card creation with ease."
+                            />
+                            <div class="portfolio-info">
+                                <h4>IES College ID Card Builder</h4>
+                                <div class="portfolio-links">
+                                    <a href="IES-College-ID-Card-Builder.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item front-end game">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/guess.png" class="img-fluid" alt="'guess-color' is a React JS-based web game that challenges players to identify color codes. Correct answers earn 5 points while incorrect answers deduct 2 points. The game saves scores in local storage, providing a seamless experience. It's a fun and engaging way to enhance color recognition and cognitive abilities."
+                            />
+                            <div class="portfolio-info">
+                                <h4>Guess color</h4>
+                                <p>Guess the color code</p>
+                                <div class="portfolio-links">
+                                    <a href="guess.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item front-end">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/fake-window-update.png" class="img-fluid" alt="This is a Windows update mimic created using React." />
+                            <div class="portfolio-info">
+                                <h4>Fake windows update</h4>
+                                <div class="portfolio-links">
+                                    <a href="fake-window-update.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item tool">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/advance-web-scraper-amazon.png" class="img-fluid" alt="It is a tool to extract data about a specific product from the Amazon product page The extracted data will be Basic information, Rating, Screenshot, Comments/customer reviews.User can specify the specific time (in seconds) to extract comments/reviews, this will save time otherwise scrapers will extract all comments.Save data as .xlsx"
+                            />
+                            <div class="portfolio-info">
+                                <h4>Advance web scraper amazon</h4>
+                                <p>web scraping using python</p>
+                                <div class="portfolio-links">
+                                    <a href="advance-web-scraper-amazon.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 portfolio-item website-3d">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/projects/happy-diwali-2023.gif" class="img-fluid" alt="Explore a 3D Diwali greeting on this website, sending heartfelt wishes to all in a vibrant three.js experience." />
+                            <div class="portfolio-info">
+                                <h4>Happy diwali 2023</h4>
+                                <div class="portfolio-links">
+                                    <a href="happy-diwali-2023.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Portfolio Section -->
+
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Services</h2>
+                    <p>The service offered by me and my team</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="icon-box iconbox-blue">
+                            <div class="icon">
+                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
+                  </path>
+                </svg>
+                                <i class="bx bxs-pyramid"></i>
+                            </div>
+                            <h4><a href="">3D Website Development</a></h4>
+                            <p>
+                                Enhancing User Interface and experience with an immersive touch with 3D Website Innovation
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="icon-box iconbox-yellow">
+                            <div class="icon">
+                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813">
+                  </path>
+                </svg>
+                                <i class="bx bxl-python"></i>
+                            </div>
+                            <h4><a href="">Python Development</a></h4>
+                            <p>Stable python solutions for modern software development</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon-box iconbox-blue">
+                            <div class="icon">
+                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
+                  </path>
+                </svg>
+                                <i class="bx bxl-nodejs"></i>
+                            </div>
+                            <h4><a href="">Web Development</a></h4>
+                            <p>
+                                I like to code things from scratch, and enjoy bringing ideas to life in the browser.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="icon-box iconbox-pink">
+                            <div class="icon">
+                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
+                  </path>
+                </svg>
+                                <i class="bx bxs-business"></i>
+                            </div>
+                            <h4><a href="">ERP Development</a></h4>
+                            <p>
+                                Simple ERP solutions for complex industrial structures and management
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon-box iconbox-blue">
+                            <div class="icon">
+                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813">
+                  </path>
+                </svg>
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h4><a href="">Search engine optimization</a></h4>
+                            <p>
+                                seo for improving the ranking of a website in search engine listings
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="icon-box iconbox-red">
+                            <div class="icon">
+                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572">
+                  </path>
+                </svg>
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h4><a href="">Trainer</a></h4>
+                            <p>
+                                I give training for optimized progrmming using various programing languages.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Services Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Contact</h2>
+                </div>
+
+                <div class="row mt-1">
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <div class="address">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Location:</h4>
+                                <p>Kampala, Uganda</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>ethancylbgmail.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4>Call:</h4>
+                                <p>+256 770707300</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 mt-5 mt-lg-0">
+                        <p>
+                            Hey! Just feel free to contact me. I would love to solve your problems
+                        </p>
+                        <pre>
+              You know there is lot more you can learn about me
+              and trust me I always look forward to interact with new
+              people with inginious ideas,obviously it helps me to grow but you
+              know what is the best part ? I just enjoy challenges 
+              I really feel honored when people choose me to shape there
+              ideas into reality
+              I am waiting for your plan just a call ahead
+            </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Contact Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
         <div class="container">
-            <div class="section-header fade-up">
-                <h2 class="section-title">Let's Work Together</h2>
-                <p class="section-subtitle">
-                    Have a project in mind? Let's discuss how we can bring your ideas to life.
-                </p>
+            <h3>Ethan Bukenya</h3>
+            <p>Always Think for the User</p>
+            <div class="social-links">
+                <a href="https://leetcode.com/ethanbukenya/" target="_blank" class="leetcode"><i
+            class="bx leetcode-icon white-icon"></i></a>
+                <a href="https://auth.geeksforgeeks.org/user/ethanbukenya" target="_blank" class="geeksforgeeks"><i
+            class="bx geeksforgeeks-icon white-icon"></i></a>
+                <a href="https://github.com/ethanbukenya-resume" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+                <a href="https://www.chess.com/member/ethanbukenya/" target="_blank" class="chess-com"><i
+            class="bx chess-com-icon white-icon"></i></a>
+                <a href="https://stackoverflow.com/users/17047946/ethanbukenya" target="_blank" class="github"><i
+            class="bx bxl-stack-overflow"></i></a>
+                <a href="https://www.linkedin.com/in/ethanbukenya" class="linkedin" target="_blank"><i
+            class="bx bxl-linkedin"></i></a>
+                <a href="https://www.hackerrank.com/ethanbukenya" class="twitter" target="_blank"><i
+            class="fab fa-hackerrank"></i></a>
+                <a href="https://www.youtube.com/ethbukenya" class="youtube" target="_blank"><i
+            class="bx bxl-youtube"></i></a>
+                <a href="mailto:ethanbukenya@gmail.com" class="gmail" target="_blank"><i class="bx bxl-google"></i></a>
+                <a href="https://www.instagram.com/ethbukenya/" class="instagram" target="_blank"><i
+            class="bx bxl-instagram"></i></a>
             </div>
-            
-            <div class="contact-content">
-                <div class="contact-info fade-up">
-                    <h3>Get In Touch</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>ethancylb@gmail.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+256770707300</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Kampala, Uganda</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form fade-up">
-                    <form>
-                        <div class="form-group">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="name" class="form-input" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="form-input" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-input" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" class="form-input form-textarea" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-                    </form>
-                </div>
+            <div class="copyright">
+                &copy; Copyright <strong><span>Ethan Bukenya</span></strong>. All Rights Reserved
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer style="background: var(--text-primary); color: white; text-align: center; padding: 2rem 0;">
-        <div class="container">
-            <p>&copy; 2024 Ethan Bukenya. All rights reserved.</p>
-            <div class="social-links" style="justify-content: center; margin-top: 1rem;">
-                <a href="https://github.com" class="social-link" target="_blank" style="background: rgba(255,255,255,0.1);">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com" class="social-link" target="_blank" style="background: rgba(255,255,255,0.1);">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://twitter.com" class="social-link" target="_blank" style="background: rgba(255,255,255,0.1);">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="mailto:ethancylb@gmail.com" class="social-link" style="background: rgba(255,255,255,0.1);">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
+            <div class="credits"></div>
         </div>
     </footer>
+    <!-- End Footer -->
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
-        // Fade up animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-up').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Navbar background on scroll
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.boxShadow = 'none';
-            }
-        });
-
-        // Animate skill bars when visible
-        const skillBars = document.querySelectorAll('.skill-progress');
-        const skillObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const width = entry.target.style.width;
-                    entry.target.style.width = '0';
-                    setTimeout(() => {
-                        entry.target.style.width = width;
-                    }, 100);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        skillBars.forEach(bar => {
-            skillObserver.observe(bar);
-        });
-
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            this.reset();
-        });
-
-        // Typing effect for hero subtitle
-        const subtitle = document.querySelector('.subtitle');
-        const originalText = subtitle.textContent;
-        subtitle.textContent = '';
-        
-        let i = 0;
-        const typeWriter = () => {
-            if (i < originalText.length) {
-                subtitle.textContent += originalText.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
-            }
-        };
-        
-        setTimeout(typeWriter, 1000);
-    </script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js?v=2.0"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js?v=2.0"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js?v=2.0"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js?v=2.0"></script>
+    <script src="assets/vendor/purecounter/purecounter.js?v=2.0"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js?v=2.0"></script>
+    <script src="assets/vendor/typed.js/typed.min.js?v=2.0"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js?v=2.0"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js?v=2.0"></script>
 </body>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        "name": "Ethan Bukenya",
+        "url": "",
+        "image": "",
+        "sameAs": [
+            "https://www.linkedin.com/in/ethanbukenya/",
+            "https://www.youtube.com/ethbukenya",
+            "https://github.com/ethanbukenya",
+            "https://www.instagram.com/ethbukenya/",
+            "https://stackoverflow.com/users/17047946/ethan-bukenya",
+            "https://www.hackerrank.com/ethanbukenya",
+            "https://auth.geeksforgeeks.org/user/ethanbukenya"
+        ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Hotstar clone",
+            "item": "https://ethanbukenya.github.io/hotstar-clone"
+        }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Algorithm visualizer",
+            "item": "https://ethanbukenya.github.io/algorithm-visualizer"
+        }, {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Snake Game",
+            "item": "https://ethanbukenya.github.io/snake-game"
+        }, {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "React alarm",
+            "item": "https://ethanbukenya.github.io/react-alarm/"
+        }]
+    }
+</script>
+
 </html>
